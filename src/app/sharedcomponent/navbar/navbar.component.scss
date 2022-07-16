@@ -1,246 +1,260 @@
-*{// EvitaProblemasFuturos. *{ SobrescreveAsOutrasClasseDosCss
-    box-sizing: border-box; // IncluioPreenchimentoeaBordaNaLarguraeAlturaDeUmeElemeto.EvitaQueElementosComaMesmaLaguraeAlturaTenhamTamanhosDiferentes
-    padding: 0;// DefineQueNãoVaiterDistênciaEntreoElementoeaBorda
-    margin: 0;// DefineQueNãoVaiTerDistânciaForaDaBorda
- }
+// *{ SobrescreveAsOutrasClasseDosCss
+* {
+   box-sizing: border-box; // inclui o preenchimento e a borda na largura e altura de ume elemeto, evita que elementos com a mesma lagura e altura tenham tamanhos diferentes
+   padding: 0; // define que nao vai ter distancia entre o elemento e a borda
+   margin: 0; // define que nao vai ter distancia fora da borda
+}
 
- ul{
-     list-style: none;
- }
+ul {
+   list-style: none;
+}
 
- a{
+a {
    text-decoration: none;
    color: #FFFFFF;
- }
+}
 
- .navbar{
-   background-color: #323232;// CorDoNavbar
-   height: 65.69px;// AlturaDoNavbar.DadaEm px ParaEvitarQueOselementosSaiamDaDiv
+.navbar {
+   background-color: #323232;
+   height: 65.69px;
    display: flex;
    justify-content: space-between;
- }
- 
- .logo{
-   display: inline-block;// PermiteDefiniaraLarura(width)eaAltura(Heigth)DoElemento.PermiteDeixarUmElementoAoLadoDoOutroNaMesmaLinha,PermiteUtilizarAsPropriedadesDo text-align
- }
+}
 
- .main-nav{
+.logo {
+   display: inline-block; // deixa o um elemento ao lado do outro na mesma linha
+}
+
+.main-nav {
    display: flex;
    align-items: center;
-   img{
+
+   img {
       width: 64px;
       padding: 6px;
       margin-right: 4px;
-  }
- }
+   }
+}
 
- .main-nav-tabs-sub{
+.main-nav-tabs-sub {
    background-color: #4DB8EA;
    height: 65.69px;
    display: grid;
-   span{
+
+   span {
       color: #FFFFFF;
-  }
- }
+   }
+}
 
- .container-list1{
+.container-list1 {
    display: flex;
    align-items: center;
- }
+}
 
- .container-list2{
+.container-list2 {
    display: flex;
    align-items: center;
- }
- 
- // DispositivosAté 551px
- @media screen and (max-width:551px){// CelularesVaiAté 767px 7Polegadas.TamahosMaioresSãoPara:TabletseDispositivosMaiores
-   .navbar{      
+}
+
+// dispositivos ate 551px
+// celulares vai ate 767px 7 Polegadas, tamahos maiores sao para tablets e dispositivos maiores
+@media screen and (max-width:551px) {
+   .navbar {
       align-items: center;
    }
-  
-   .logo{ // EssaEstruturaPodeSerMontadaPorqueUsaTagDoPróprioHTML
-      img{ // img éUmaTagDoPróprioHTML
-          width: 158px;// Tamanho/LarguraDaLogo     
+
+   .logo {
+      img {
+         width: 158px;
       }
    }
-  
-   .main-nav{
-      margin-right: 88px;// DistâciaEntreaBordaDaLogoeoNavbar
+
+   .main-nav {
+      margin-right: 88px;
    }
-  
-   .main-nav-tabs-sub{      
+
+   .main-nav-tabs-sub {
       grid-template-columns: 50% 50% auto;
    }
-  
-   .container-list1{      
+
+   .container-list1 {
       justify-content: center;
-      ul{
-          font-size: 14px;
+
+      ul {
+         font-size: 14px;
       }
    }
-  
-   .container-list2{     
+
+   .container-list2 {
       justify-content: center;
-      ul{
-          font-size: 14px;
+
+      ul {
+         font-size: 14px;
       }
    }
-  
-   .container-list3{     
-       display: none;       
-      ul{
-        font-size: 0px;
+
+   .container-list3 {
+      display: none;
+
+      ul {
+         font-size: 0px;
       }
    }
-  
-   .container-fiter{// LarguraDoFiltro
+
+   .container-fiter {
       width: 0px;
    }
-  
-  }
 
- // DispositivosApontirDe 552px
- @media screen and (min-width:552px){// CelularesVaiAté 767px 7Polegadas.TamahosMaioresSãoPara:TabletseDispositivosMaiores
-    
-    .logo{ // EssaEstruturaPodeSerMontadaPorqueUsaTagDoPróprioHTML
-       margin-left: 48px;
-       img{ // img éUmaTagDoPróprioHTML
-           width: 180px;// Tamanho/LarguraDaLogo
-           margin: 8px auto;
-       }
-    }
-   
-    .main-nav{
-       margin-right: 88px;// DistâciaEntreaBordaDaLogoeoNavbar
-    }
-   
-    .main-nav-tabs-sub{      
-       grid-template-columns: 50% 50% auto;
-    }
-   
-    .container-list1{       
-       ul{
-           margin-left: 12px;
-           font-size: 16px;
-       }
-    }
-   
-    .container-list2{       
-       justify-content: center;
-       ul{
-           margin-left: 0px;
-           font-size: 16px;
-       }
-    }
-   
-    .container-list3{     
-        display: none;        
-       ul{
+}
+
+// dispositivos apartir de 552px
+@media screen and (min-width:552px) {
+
+   .logo {
+      margin-left: 48px;
+
+      img {
+         width: 180px;
+         margin: 8px auto;
+      }
+   }
+
+   .main-nav {
+      margin-right: 88px;
+   }
+
+   .main-nav-tabs-sub {
+      grid-template-columns: 50% 50% auto;
+   }
+
+   .container-list1 {
+      ul {
+         margin-left: 12px;
+         font-size: 16px;
+      }
+   }
+
+   .container-list2 {
+      justify-content: center;
+
+      ul {
+         margin-left: 0px;
+         font-size: 16px;
+      }
+   }
+
+   .container-list3 {
+      display: none;
+
+      ul {
          font-size: 0px;
-       }
-    }
-   
-    .container-fiter{// LarguraDoFiltro
-       width: 0px;
-    }
-   
+      }
    }
 
- // DispositivosApontirDe 769px
- @media screen and (min-width:769px){// CelularesVaiAté 767px 7Polegadas.TamahosMaioresSãoPara:TabletseDispositivosMaiores
-    
-    .logo{ // EssaEstruturaPodeSerMontadaPorqueUsaTagDoPróprioHTML
-       margin-left: 100px;
-       img{ // img éUmaTagDoPróprioHTML
-           width: 221px;// Tamanho/LarguraDaLogo
-           margin: 1px auto;
-       }
-    }
-   
-    .main-nav{
-       margin-right: 100px;// DistâciaEntreaBordaDaLogoeoNavbar
-    }
-   
-    .main-nav-tabs-sub{      
-       grid-template-columns: 50% 17% auto;
-    }
-   
-    .container-list1{       
-       ul{
-           margin-left: 24px;
-           font-size: 16px;
-       }
-    }
-   
-    .container-list2{      
-       ul{
-           margin-left: 4px;
-           font-size: 16px;
-       }
-    }
-   
-    .container-list3{      
-       display: flex;   
-       align-items: center;
-       flex-direction: row-reverse; 
-       margin-right: 28px;
-       ul{
-           font-size: 14px;
-       }
-    }
-   
-    .container-fiter{// LarguraDoFiltro
-       width: 126px;
-    }
-   
+   .container-fiter {
+      width: 0px;
    }
 
-// DispositivosApontirDe 1045px
- @media screen and (min-width:1045px){// CelularesVaiAté 767px 7Polegadas.TamahosMaioresSãoPara:TabletseDispositivosMaiores
- 
- .logo{ // EssaEstruturaPodeSerMontadaPorqueUsaTagDoPróprioHTML
-    margin-left: 100px;
-    img{ // img éUmaTagDoPróprioHTML
-        width: 221px;// Tamanho/LarguraDaLogo
-        margin: 1px auto;
-    }
- }
+}
 
- .main-nav{
-    margin-right: 100px;// DistâciaEntreaBordaDaLogoeoNavbar
- }
+// dispositivos apartir de 769px
+@media screen and (min-width:769px) {
 
- .main-nav-tabs-sub{  
-    grid-template-columns: 50% 13% auto;
- }
+   .logo {
+      margin-left: 100px;
 
- .container-list1{    
-    ul{
-        margin-left: 24px;
-        font-size: 16px;
-    }
- }
+      img {
+         width: 221px;
+         margin: 1px auto;
+      }
+   }
 
- .container-list2{    
-    ul{
-        margin-left: 4px;
-        font-size: 16px;
-    }
- }
+   .main-nav {
+      margin-right: 100px;
+   }
 
- .container-list3{      
-    display: flex;   
-    align-items: center;
-    flex-direction: row-reverse; 
-    margin-right: 28px;
-    ul{
-        font-size: 14px;
-    }
- }
+   .main-nav-tabs-sub {
+      grid-template-columns: 50% 17% auto;
+   }
 
- .container-fiter{// LarguraDoFiltro
-    width: 126px;
- }
+   .container-list1 {
+      ul {
+         margin-left: 24px;
+         font-size: 16px;
+      }
+   }
+
+   .container-list2 {
+      ul {
+         margin-left: 4px;
+         font-size: 16px;
+      }
+   }
+
+   .container-list3 {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      margin-right: 28px;
+
+      ul {
+         font-size: 14px;
+      }
+   }
+
+   .container-fiter {
+      width: 126px;
+   }
+
+}
+
+// dispositivos apartir de 1045px
+@media screen and (min-width:1045px) {
+
+   .logo {
+      margin-left: 100px;
+
+      img {
+         width: 221px;
+         margin: 1px auto;
+      }
+   }
+
+   .main-nav {
+      margin-right: 100px;
+   }
+
+   .main-nav-tabs-sub {
+      grid-template-columns: 50% 13% auto;
+   }
+
+   .container-list1 {
+      ul {
+         margin-left: 24px;
+         font-size: 16px;
+      }
+   }
+
+   .container-list2 {
+      ul {
+         margin-left: 4px;
+         font-size: 16px;
+      }
+   }
+
+   .container-list3 {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      margin-right: 28px;
+
+      ul {
+         font-size: 14px;
+      }
+   }
+
+   .container-fiter {
+      width: 126px;
+   }
 
 }

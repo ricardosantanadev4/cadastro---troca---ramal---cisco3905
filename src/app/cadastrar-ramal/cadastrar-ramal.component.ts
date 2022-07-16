@@ -14,9 +14,14 @@ export class CadastrarRamalComponent implements OnInit {
   ngOnInit(): void {// InicializaoMetodo
     this.populatePesquizar()
   }
-  auxObject = { cont: 50, data: [] }// auxObject RecebeUmObjetoComUmContadorValendo100eUmDataQueeUMaListaVazia
-  listPesquiza: Pesquiza[];// listPesquiza eDoTipo Pesquiza QueeaInterfaceQueFoiCriadaEm pesquizar-ramal.ts
-  populatePesquizar() {//MetodoQueGeraUmaListaComDadosFicticios
+
+  // auxObject recebeu um objeto contendo um contador e um array
+  auxObject = { cont: 50, data: [] }
+
+  listPesquiza: Pesquiza[];
+
+  // gera os dados ficticios da tabela
+  populatePesquizar() {
     for (let index = 0; index < this.auxObject.cont; index++) {
       this.auxObject.data.push({
         ramal: '686' + index,
@@ -35,7 +40,7 @@ export class CadastrarRamalComponent implements OnInit {
     ipCentral: new FormControl('', [Validators.required]),
   })
 
-  // ConfiguracoesDoRetanguloDeSucesso
+  // notificacoes de sucesso
   ToastSucess = Swal.mixin({
     toast: true,
     position: 'top-right',
@@ -49,7 +54,7 @@ export class CadastrarRamalComponent implements OnInit {
     timerProgressBar: true
   })
 
-  // ConfiguracoesDoRetanguloDeErro
+  // notificacoes de erro
   ToastError = Swal.mixin({
     toast: true,
     position: 'top-right',
@@ -63,7 +68,7 @@ export class CadastrarRamalComponent implements OnInit {
     timerProgressBar: true
   })
 
-  // SeTodosOsCamposEstiveremValidosExibeoRetanguloDeSucesso.CasoContrarioExibeoRetanguloDeErro
+  // se todos os camposdo FormGroup estiverem validos exibe a noficacao de sucesso, caso contrario exibe a notificacao de erro
   async salvar() {
     if (this.cadastrarRamal.valid) {
       await this.ToastSucess.fire({
