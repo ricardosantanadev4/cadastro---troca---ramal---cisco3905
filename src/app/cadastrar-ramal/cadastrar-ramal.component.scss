@@ -1,0 +1,334 @@
+ * {
+   box-sizing: border-box; // FazComQueOsValoresDe Padding e Border SejamIncorporadosÀsDimensõesHorizontaleVerticalDo Elemento.ComIsso, Width e Height PassamaRepresentaroTamanhoTotal,IndependentementeDasDemaisPropriedades.(SóNãoFuncionaCom BarraDeRolagem NoCss.aBarraDeRolagemDeveSerAdicionadaNoHTML)
+   padding: 0;
+   margin: 0;
+ }
+
+ .example-form {
+   width: 100%;
+   height: 60vh;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+
+   mat-form-field {
+     width: 80%;
+   }
+ }
+
+ .wrapper-1 {
+   width: 100%;
+   height: 20vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   button {
+     background-color: #5FBFEC;
+   }
+ }
+
+ .container-table {
+   height: 80vh;
+   // overflow: auto adociona uma barra de rolagem quando necessario
+   overflow: auto;
+   ;
+
+   table {
+     width: 100%;
+     border-collapse: collapse; // EliminaoEspaçoEntreAsCelulasDaTabeldaFazendoComQueAsBodasSeFundamEmUmaSó
+     color: #222222;
+   }
+ }
+
+ table th,
+ table td {
+   padding: .625em;
+   text-align: center; // Alinhaos th ComOs tb   
+ }
+
+ table th {
+   font-size: .85em; // TamanhoDaFonteDos th
+   letter-spacing: .1em; // EspaçoEntreAsLetrasDos th
+   text-transform: uppercase; // VaiExibiraPalavraDeDentroDo th MaiúscoloMesmoQueoDesenvolvedorEscreVaMinúsculo
+
+ }
+
+ table td {
+   letter-spacing: .1em; // EspaçoEntreAsLetrasDos td
+   text-transform: uppercase; // VaiExibiraPalavraDeDentroDo td MaiúscoloMesmoQueoDesenvolvedorEscreVaMinúsculo
+ }
+
+ .container-actions {
+   display: flex;
+   justify-content: space-evenly; // DeixaOsÍconesEditareDeleteNamesmaLinhaMantendoUmeEspaçoEntreOsÍconesePorTrás.PrecisaDo Display:flex; ParaFuncionar
+   cursor: pointer; // AtivaaMãoZinhaDoMickey  
+ }
+
+ .container-actions-edit {
+   color: #5D82D1;
+   border: 1px solid #ccc;
+   display: flex;
+   justify-content: center; // CentralizaNaHorizontal
+   align-items: center; // CentralizaNaVertical
+   border-radius: 2px; // DeixaAsPontasDaBordaAredondadasEm 2px
+ }
+
+ .container-actions-delete {
+   color: #E13138;
+   border: 1px solid #ccc;
+   display: flex;
+   justify-content: center; // CentralizaNaHorizontal
+   align-items: center; // CentralizaNaVertical
+   border-radius: 2px; // DeixaAsPontasDaBordaAredondadasEm 2px 
+ }
+
+ .container-line1 {
+   display: grid;
+   grid-template-columns: 50% auto;
+ }
+
+ .wrapper:nth-child(1) {
+   grid-row: 1/3; // oPrimeiroItemVaiOcuparDaLinha1AtéaLinha 
+ }
+
+ .container-filter {
+   display: flex;
+   justify-content: center;
+   height: 48px;
+ }
+
+ // DipositivosaPartirDe 552px 
+ @media screen and (max-width:551px) {
+   // CelularesVaiAté 767px 7Polegadas.TamahosMaioresSãoPara:TabletseDispositivosMaiores
+
+   //TelaDeConfiguraçãoDeRamal
+   .example-form {
+     input {
+       font-size: 12px;
+     }
+
+   }
+
+   table thead {
+     display: none; // OcultaoThead.TemQueDeterminar@mediaScreenParapoderoCultarSomenteParaCelular
+   }
+
+   table tbody td {
+     width: 100%;
+     justify-content: center; // AlinhaNoCentroNaVertical.PrecisaDesativar nth-child Do Thead
+     align-items: center;
+     padding: 25px 0;
+     display: block; // ColocaTodosos td EmBaixoDoOutro          
+     font-size: 12px;
+   }
+
+   table td:before {
+     content: attr(data-title); // TrazTodosOsTítulosDefinidosEm data-title="" No HTML
+     display: block; // ColocaTodosOs data-title="" EmBaixoDoOutroJuntoComOstd
+     font-size: 12px;
+   }
+
+   .container-filter {
+     font-size: 12px;
+
+     mat-form-field {
+       width: 104px;
+     }
+   }
+
+   .container-actions {
+     margin-top: 26px;
+   }
+
+   .container-actions-edit {
+     padding: 6px;
+   }
+
+   mat-icon {
+     height: 22px;
+     width: 22px;
+   }
+
+
+
+ }
+
+ // DipositivosaPartirDe 552px 
+ @media screen and (max-width:768px) {
+   // CelularesVaiAté 767px 7Polegadas.TamahosMaioresSãoPara:TabletseDispositivosMaiores
+
+   //TelaDeConfiguraçãoDeRamal
+   .example-form {
+     input {
+       font-size: 12px;
+     }
+
+   }
+
+   table thead {
+     display: none; // OcultaoThead.TemQueDeterminar@mediaScreenParapoderoCultarSomenteParaCelular
+   }
+
+   table tbody td {
+     width: 100%;
+     justify-content: center; // AlinhaNoCentroNaVertical.PrecisaDesativar nth-child Do Thead
+     align-items: center;
+     padding: 25px 0;
+     display: block; // ColocaTodosos td EmBaixoDoOutro          
+     font-size: 12px;
+   }
+
+   table td:before {
+     content: attr(data-title); // TrazTodosOsTítulosDefinidosEm data-title="" No HTML
+     display: block; // ColocaTodosOs data-title="" EmBaixoDoOutroJuntoComOstd
+     font-size: 12px;
+   }
+
+   .container-filter {
+     font-size: 12px;
+
+     mat-form-field {
+       width: 104px;
+     }
+   }
+
+   .container-actions {
+     margin-top: 26px;
+   }
+
+   .container-actions-edit {
+     padding: 6px;
+   }
+
+   mat-icon {
+     height: 22px;
+     width: 22px;
+   }
+
+   .container-actions-delete {
+     padding: 6px;
+   }
+
+ }
+
+ // DipositivosaPartirDe 769px 
+ @media screen and (min-width:769px) {
+   // CelularesVaiAté 767px 7Polegadas.TamahosMaioresSãoPara:TabletseDispositivosMaiores
+
+   //TelaDeConfiguraçãoDeRamal
+   table th,
+   table td {
+     border: 1px solid #ccc; // AdicionaUmaBordaAoRedorDos th e td
+   }
+
+   table td {
+     font-size: 10px;
+   }
+
+   thead tr {
+     background-color: #EBEDF0;
+     color: #555555;
+     position: sticky; // Fixao thead tr
+     top: -2px; // Reecuao thead tr EscondendoaSobraQuePassaPorBaixoQuandoRolao scroll
+   }
+
+   .container-filter {
+     height: 0;
+     display: none;
+   }
+
+   .container-actions-edit {
+     padding: 1px;
+
+   }
+
+   mat-icon {
+     height: 22px;
+     width: 22px;
+   }
+
+   .container-actions-delete {
+     padding: 1px;
+   }
+
+   // DefineaLatguraDasColunasDaTabelaEmTamanhosDiferentes,TotalizandoaLaguraTotalDe50%(Desativaro table-layout: fixed ParaPoderFuncionar!)
+   table tbody tr td:nth-child(1) {
+     // LarguraDaColuna1
+     width: 14%;
+   }
+
+   Table tbody tr td:nth-child(2) {
+     width: 34%;
+   }
+
+   table tbody tr td:nth-child(3) {
+     width: 30%;
+   }
+
+   table tbody tr td:nth-child(4) {
+     width: 22%;
+   }
+
+ }
+
+ // DipositivosaPartirDe 1045px 
+ @media screen and (min-width:1045px) {
+   // CelularesVaiAté 767px 7Polegadas.TamahosMaioresSãoPara:TabletseDispositivosMaiores
+
+   //TelaDeConfiguraçãoDeRamal
+   table th,
+   table td {
+     border: 1px solid #ccc; // AdicionaUmaBordaAoRedorDos th e td
+   }
+
+   table td {
+     font-size: 12px;
+   }
+
+   thead tr {
+     background-color: #EBEDF0;
+     color: #555555;
+     position: sticky; // Fixao thead tr
+     top: -2px; // Reecuao thead tr EscondendoaSobraQuePassaPorBaixoQuandoRolao scroll
+   }
+
+   .container-filter {
+     height: 0;
+     display: none;
+   }
+
+   .container-actions-edit {
+     padding: 6px;
+   }
+
+   .container-actions-delete {
+     padding: 6px;
+   }
+
+   // DefineaLatguraDasColunasDaTabelaEmTamanhosDiferentes,TotalizandoaLaguraTotalDe50%(Desativaro table-layout: fixed ParaPoderFuncionar!)
+   table tbody tr td:nth-child(1) {
+     // LarguraDaColuna1
+     width: 14%;
+   }
+
+   Table tbody tr td:nth-child(2) {
+     width: 34%;
+   }
+
+   table tbody tr td:nth-child(3) {
+     width: 30%;
+   }
+
+   table tbody tr td:nth-child(4) {
+     width: 22%;
+   }
+
+ }
+
+ .colored-toast {
+   color: white;
+ }

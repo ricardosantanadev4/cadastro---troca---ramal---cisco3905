@@ -1,0 +1,42 @@
+<nav class="navbar">
+    <!-- Tag <nav> TemaMesmaFunçãoDa<div>.IndicaDeManeiraSemâticaOndeEstãoOsLinksDeNavegaçãoDaPágina -->
+    <span class="logo">
+        <!-- <span>PermiteModificaraAparênciaDeUmaParteDoTexto.Ex:<span>ParteDoTexto> scss: Background color: blue; SóoNome ParteDoTexto VaiFicarAzul oRestoFicaNormal -->
+        <img src="../../../assets/img/logo-2x_2.png">
+    </span>
+    <ul class="main-nav">
+        <img src="../../../assets/img/avatar.jpg">
+        <li>
+            <!-- routerLink="/login DirecionaParaaPáginaDeLogin-->
+            <a routerLink="/login">Sair</a>
+            <!-- <a> ServeParaIndicarQueUmElementoConteráUmaHiperligação.OuSeja,UmLink -->
+        </li>
+    </ul>
+</nav>
+
+<nav class="main-nav-tabs-sub">
+    <div class="container-list1">
+        <ul>
+            <li><a class="nav-links"><span>Configurar-ramal</span></a></li>
+        </ul>
+    </div>
+    <div class="container-list2">
+        <ul>
+            <li><a class="nav-links"><span>Pesquizar-ramais</span></a></li>
+        </ul>
+    </div>
+    <div class="container-list3">
+        <ul>
+            <li>
+                <mat-form-field class="container-fiter" appearance="standard">
+                    <mat-label>
+                        <mat-icon>
+                            <span>search</span>
+                        </mat-icon>
+                    </mat-label>
+                    <span><input matInput placeholder="XXXXXXXXXXXXXX" #input></span>
+                </mat-form-field>
+            </li>
+        </ul>
+    </div>
+</nav>
