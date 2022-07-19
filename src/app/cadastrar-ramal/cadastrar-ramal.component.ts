@@ -16,7 +16,7 @@ export class CadastrarRamalComponent implements OnInit {
   }
 
   // auxObject recebeu um objeto contendo um contador e um array
-  auxObject = { cont: 50, data: [] }
+  auxObject = { cont: 5, data: [] }
 
   listPesquiza: Pesquiza[];
 

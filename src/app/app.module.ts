@@ -11,7 +11,6 @@ import { NavbarComponent } from './sharedcomponent/navbar/navbar.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
-import { ModelsComponent } from './models/models.component';
 import {MatIconModule} from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
@@ -20,7 +19,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     CadastrarRamalComponent,
     NavbarComponent,
-    ModelsComponent,
   ],
   imports: [
     BrowserModule,
