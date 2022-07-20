@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { Pesquiza } from '../models/pesquizar-ramal';
@@ -9,29 +9,29 @@ import { Pesquiza } from '../models/pesquizar-ramal';
   styleUrls: ['./cadastrar-ramal.component.scss']
 })
 export class CadastrarRamalComponent implements OnInit {
-  constructor() { }
 
-  ngOnInit(): void {// InicializaoMetodo
-    this.populatePesquizar()
+  pesquiza: Pesquiza = {};
+  constructor() { }
+  // iniciarlizar o metodo atutomaticamente quando acessar a pagina, nao precisa de iniciarlizar manualmente
+  ngOnInit(): void {
   }
 
-  // auxObject recebeu um objeto contendo um contador e um array
-  auxObject = { cont: 5, data: [] }
-
-  listPesquiza: Pesquiza[];
-
-  // gera os dados ficticios da tabela
-  populatePesquizar() {
-    for (let index = 0; index < this.auxObject.cont; index++) {
-      this.auxObject.data.push({
-        ramal: '686' + index,
-        serial: index + 'lxkerfzlcsoyuib',
-        ipCentral: '192.168.169.16' + index
-      });
-      this.listPesquiza = this.auxObject.data;
+  // se todos os camposdo FormGroup estiverem validos exibe a noficacao de sucesso, caso contrario exibe a notificacao de erro
+  async Submit() {
+    if (this.cadastrarRamal.valid) {
+      console.log(this.pesquiza);
+      await this.ToastSucess.fire({
+        icon: 'success',
+        title: 'Atualizado com sucesso!',
+      })
+    } else {
+      console.log(this.pesquiza);
+      await this.ToastError.fire({
+        icon: 'error',
+        title: 'Verifique os campos!',
+      })
     }
   }
-
   // so sera valido se todos os campos do FormGroupEstiverem Preenchidos
   cadastrarRamal = new FormGroup({
     ramal: new FormControl('', [Validators.required]),
@@ -51,7 +51,7 @@ export class CadastrarRamalComponent implements OnInit {
     },
     showConfirmButton: false,
     timer: 2500,
-    timerProgressBar: true
+    timerProgressBar: false,
   })
 
   // notificacoes de erro
@@ -65,23 +65,7 @@ export class CadastrarRamalComponent implements OnInit {
     },
     showConfirmButton: false,
     timer: 2500,
-    timerProgressBar: true
+    timerProgressBar: false
   })
-
-  // se todos os camposdo FormGroup estiverem validos exibe a noficacao de sucesso, caso contrario exibe a notificacao de erro
-  async salvar() {
-    if (this.cadastrarRamal.valid) {
-      await this.ToastSucess.fire({
-        icon: 'success',
-        title: 'Atualizado com sucesso!',
-      })
-    } else {
-      await this.ToastError.fire({
-        icon: 'error',
-        title: 'Verifique os campos!',
-      })
-    }
-  }
-
 
 }

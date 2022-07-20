@@ -31,61 +31,6 @@
    }
  }
 
- .container-table {
-   height: 80vh;
-   // overflow: auto adociona uma barra de rolagem quando necessario
-   overflow: auto;
-   ;
-
-   table {
-     width: 100%;
-     border-collapse: collapse; // EliminaoEspaçoEntreAsCelulasDaTabeldaFazendoComQueAsBodasSeFundamEmUmaSó
-     color: #222222;
-   }
- }
-
- table th,
- table td {
-   padding: .625em;
-   text-align: center; // Alinhaos th ComOs tb   
- }
-
- table th {
-   font-size: .85em; // TamanhoDaFonteDos th
-   letter-spacing: .1em; // EspaçoEntreAsLetrasDos th
-   text-transform: uppercase; // VaiExibiraPalavraDeDentroDo th MaiúscoloMesmoQueoDesenvolvedorEscreVaMinúsculo
-
- }
-
- table td {
-   letter-spacing: .1em; // EspaçoEntreAsLetrasDos td
-   text-transform: uppercase; // VaiExibiraPalavraDeDentroDo td MaiúscoloMesmoQueoDesenvolvedorEscreVaMinúsculo
- }
-
- .container-actions {
-   display: flex;
-   justify-content: space-evenly; // DeixaOsÍconesEditareDeleteNamesmaLinhaMantendoUmeEspaçoEntreOsÍconesePorTrás.PrecisaDo Display:flex; ParaFuncionar
-   cursor: pointer; // AtivaaMãoZinhaDoMickey  
- }
-
- .container-actions-edit {
-   color: #5D82D1;
-   border: 1px solid #ccc;
-   display: flex;
-   justify-content: center; // CentralizaNaHorizontal
-   align-items: center; // CentralizaNaVertical
-   border-radius: 2px; // DeixaAsPontasDaBordaAredondadasEm 2px
- }
-
- .container-actions-delete {
-   color: #E13138;
-   border: 1px solid #ccc;
-   display: flex;
-   justify-content: center; // CentralizaNaHorizontal
-   align-items: center; // CentralizaNaVertical
-   border-radius: 2px; // DeixaAsPontasDaBordaAredondadasEm 2px 
- }
-
  .container-line1 {
    display: grid;
    grid-template-columns: 50% auto;

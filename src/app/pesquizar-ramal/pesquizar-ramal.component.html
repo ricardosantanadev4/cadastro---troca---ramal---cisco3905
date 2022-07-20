@@ -1,0 +1,42 @@
+<!-- filtro de pesquiza -->
+<div class="container-filter">
+  <mat-form-field class="filter" appearance="standard">
+    <mat-label>
+      <mat-icon>
+        <span>search</span>
+      </mat-icon>
+    </mat-label>
+    <span><input matInput placeholder="XXXXXXXXXXXXXX" #input></span>
+  </mat-form-field>
+</div>
+<!-- tabela de ramais -->
+<div class="container-table">
+    <table>
+      <thead>
+        <tr>
+          <th>RAMAL</th>
+          <th>SERIAL</th>
+          <th>IP CENTRAL</th>
+          <th>AÇÃO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- a variavel list pesquiza esta interando no array listPesquiza -->
+        <tr *ngFor="let pesquiza of pesquiza">
+          <td data-title="Ramal">{{pesquiza.ramal}}</td>
+          <td data-title="Serial">{{pesquiza.serial}}</td>
+          <td data-title="Ip Central">{{pesquiza.ipCentral}} </td>
+          <td data-title="Açoes">
+            <div class="container-actions">
+              <div class="container-actions-edit">
+                <mat-icon>edit</mat-icon>
+              </div>
+              <div class="container-actions-delete">
+                <mat-icon>delete</mat-icon>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

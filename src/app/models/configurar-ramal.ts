@@ -1,6 +1,7 @@
-export interface Configurar{
-ramal: string;
-senha: string;
-serial: string;
-ipCentral: string;
+export class Configurar {
+    id?: number;
+    ramal?: string;
+    senha?: string;
+    serial?: string;
+    ipCentral: string;
 }

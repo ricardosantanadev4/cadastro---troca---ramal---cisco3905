@@ -6,68 +6,30 @@
     <form [formGroup]="cadastrarRamal" class="example-form">
       <mat-form-field class="example-full-width">
         <mat-label>Ramal</mat-label>
-        <input formControlName="ramal" matInput placeholder="XXXX">
+        <input formControlName="ramal" matInput placeholder="XXXX" name="ramal" id="ramal" [(ngModel)]="pesquiza.ramal">
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Senha</mat-label>
-        <input formControlName="senha" matInput type="password">
+        <input formControlName="senha" matInput type="password" name="password" id="password"
+          [(ngModel)]="pesquiza.senha">
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Serial</mat-label>
-        <input formControlName="serial" matInput placeholder="xxxxxxxxx">
+        <input formControlName="serial" matInput placeholder="xxxxxxxxx" name="serial" id="serial"
+          [(ngModel)]="pesquiza.serial">
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Ip central</mat-label>
-        <input formControlName="ipCentral" matInput placeholder="xxx.xxx.x.x">
+        <input formControlName="ipCentral" matInput placeholder="xxx.xxx.x.x" name="ip" id="ip"
+          [(ngModel)]="pesquiza.ipCentral">
       </mat-form-field>
     </form>
     <div class="wrapper-1">
       <mat-card-actions>
-        <button (click)="salvar()" class="colored-toast" mat-raised-button color="accent" class="button">Salvar</button>
+        <button (click)="Submit()" class="colored-toast" mat-raised-button color="accent" class="button">Salvar</button>
       </mat-card-actions>
     </div>
   </div>
-  <!-- filtro de pesquiza -->
-  <div class="container-filter">
-    <mat-form-field class="filter" appearance="standard">
-      <mat-label>
-        <mat-icon>
-          <span>search</span>
-        </mat-icon>
-      </mat-label>
-      <span><input matInput placeholder="XXXXXXXXXXXXXX" #input></span>
-    </mat-form-field>
-  </div>
-  <!-- tabela pesquizar-ramais -->
-  <div class="container-table">
-    <table>
-      <thead>
-        <tr>
-          <th>RAMAL</th>
-          <th>SERIAL</th>
-          <th>IP CENTRAL</th>
-          <th>AÇÃO</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- a variavel list pesquiza esta interando no array listPesquiza -->
-        <tr *ngFor="let pesquiza of listPesquiza">
-          <td data-title="Ramal">{{pesquiza.ramal}}</td>
-          <td data-title="Serial">{{pesquiza.serial}}</td>
-          <td data-title="Ip Central">{{pesquiza.ipCentral}} </td>
-          <td data-title="Açoes">
-            <div class="container-actions">
-              <div class="container-actions-edit">
-                <mat-icon>edit</mat-icon>
-              </div>
-              <div class="container-actions-delete">
-                <mat-icon>delete</mat-icon>
-              </div>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
+  <!-- tabela de ramais -->
+  <app-pesquizar-ramal></app-pesquizar-ramal>
 </div>

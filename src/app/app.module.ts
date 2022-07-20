@@ -13,12 +13,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PesquizarRamalComponent } from './pesquizar-ramal/pesquizar-ramal.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     CadastrarRamalComponent,
     NavbarComponent,
+    PesquizarRamalComponent,
   ],
   imports: [
     BrowserModule,
