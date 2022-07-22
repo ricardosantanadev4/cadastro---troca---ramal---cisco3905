@@ -4,5 +4,4 @@ export class Pesquiza {
     senha?: string;
     serial?: string;
     ipCentral?: string;
-    //acao: boolean;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Pesquiza } from '../models/pesquizar-ramal';
 
 @Component({
@@ -10,20 +11,29 @@ export class PesquizarRamalComponent implements OnInit {
 
   pesquiza: Pesquiza[] = [];
 
-  constructor() { }
+  auxObj = { cont: 10 };
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.getRamais();
   }
 
-  getRamais(){
-    let pesquiza: Pesquiza ={}
-  for(let i=0; i<10;i++){
-   pesquiza.ramal = '660' + i;
-   pesquiza.serial = 'LZKUY025' + i;
-   pesquiza.ipCentral = '192.168.0' + i;
-   this.pesquiza.push(pesquiza);
+  getRamais() {
+    for (let index = 0; index < this.auxObj.cont; index++) {
+      let pesquiza: Pesquiza = {
+        id: index,
+        ramal: '600' + index,
+        serial: 'lxarfdre' + index,
+        ipCentral: '192.168.0.' + index,
+      }
+      console.log(pesquiza);
+      this.pesquiza.push(pesquiza);
+    }
+
   }
-  console.log(this.pesquiza);
+
+  getUpdate(id: number) {
+    this.router.navigate(["ramal-edit", { id: id }])
   }
 }

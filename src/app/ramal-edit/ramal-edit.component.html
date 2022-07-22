@@ -1,0 +1,16 @@
+<form>
+    <div>Ramal
+        <button type="button" class="btn btn-secondary" routerLink="/configurar-ramal">Cancelar</button>
+        <button type="button" class="btn btn-success" (click)="submit()">Salvar</button>
+    </div>
+    <div class="form-group col-md-6">
+        <label for="exampleFormControlInput1">Número</label>
+        <input type="email" class="form-control" name="numero" id="numero" [(ngModel)]="pesquiza.ramal">
+        <label for="exampleFormControlInput1">Senha</label>
+        <input type="text" class="form-control" name="password" id="password" [(ngModel)]="pesquiza.senha">
+        <label for="exampleFormControlInput1">Serial</label>
+        <input type="email" class="form-control" name="serial" id="serial" [(ngModel)]="pesquiza.serial">
+        <label for="exampleFormControlInput1">IpCentral</label>
+        <input type="email" class="form-control" name="IpCentral" id="IpCentral" [(ngModel)]="pesquiza.ipCentral">
+    </div>
+</form>

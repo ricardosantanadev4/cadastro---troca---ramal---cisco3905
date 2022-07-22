@@ -11,32 +11,34 @@
 </div>
 <!-- tabela de ramais -->
 <div class="container-table">
-    <table>
-      <thead>
-        <tr>
-          <th>RAMAL</th>
-          <th>SERIAL</th>
-          <th>IP CENTRAL</th>
-          <th>AÇÃO</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- a variavel list pesquiza esta interando no array listPesquiza -->
-        <tr *ngFor="let pesquiza of pesquiza">
-          <td data-title="Ramal">{{pesquiza.ramal}}</td>
-          <td data-title="Serial">{{pesquiza.serial}}</td>
-          <td data-title="Ip Central">{{pesquiza.ipCentral}} </td>
-          <td data-title="Açoes">
-            <div class="container-actions">
-              <div class="container-actions-edit">
-                <mat-icon>edit</mat-icon>
-              </div>
-              <div class="container-actions-delete">
-                <mat-icon>delete</mat-icon>
-              </div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>RAMAL</th>
+        <th>SERIAL</th>
+        <th>IP CENTRAL</th>
+        <th>AÇÃO</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- a variavel list pesquiza esta interando no array listPesquiza -->
+      <tr *ngFor="let pesquiza of pesquiza">
+        <td data-title="Ramal">{{pesquiza.id}}</td>
+        <td data-title="Ramal">{{pesquiza.ramal}}</td>
+        <td data-title="Serial">{{pesquiza.serial}}</td>
+        <td data-title="Ip Central">{{pesquiza.ipCentral}} </td>
+        <td data-title="Açoes">
+          <div class="container-actions">
+            <div class="container-actions-edit">
+              <mat-icon (click)="getUpdate(pesquiza.id)">edit</mat-icon>
             </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+            <div class="container-actions-delete">
+              <mat-icon>delete</mat-icon>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -14,6 +14,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PesquizarRamalComponent } from './pesquizar-ramal/pesquizar-ramal.component';
+import { RamalEditComponent } from './ramal-edit/ramal-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +22,7 @@ import { PesquizarRamalComponent } from './pesquizar-ramal/pesquizar-ramal.compo
     CadastrarRamalComponent,
     NavbarComponent,
     PesquizarRamalComponent,
+    RamalEditComponent,
   ],
   imports: [
     BrowserModule,
